@@ -45,13 +45,40 @@ function checkEvenOdd(){
     const outputdiv=document.getElementById("outputdiv")
     if(n){
     if(n%2===0){
-        outputdiv.innerHTML="<span><h1>Even Number.😀</h1></span>"
+        outputdiv.innerHTML="<span><h1>Even Number.🤓</h1></span>"
 
     }
     else{
-        outputdiv.innerHTML="<span><h1>Odd Number.😄</h1></span>"
+        outputdiv.innerHTML="<span><h1>Odd Number.🤓</h1></span>"
     }
     }else{
         outputdiv.innerHTML="<span><h1>Please enter a valid number.😶‍🌫️</h1></span>"} 
 }
 
+
+
+function displaydetails(){
+    const name=document.getElementById("name").value
+    const age=document.getElementById("age").value
+    const city=document.getElementById("city").value
+    const outputdiv=document.getElementById("outputdiv")
+    if(name && age && city){
+    outputdiv.innerHTML="<span><h1>Name: "+name+"</h1></span>"+"<span><h1>Age: "+age+"</h1></span>"+"<span><h1>City: "+city+"</h1></span>"
+    }
+    else{
+        outputdiv.innerHTML="<span><h1>Please enter all the details.😶‍🌫️</h1></span>"
+    }
+}
+
+function printnumbers(){
+    let num=document.getElementById("num").value
+    let result=document.getElementById("outputdiv")
+    for (let i=1;i<=num;i++){
+        result.innerHTML+=(`${i}<br>`)
+    }
+}
+
+function testprompt(){
+    let input=prompt("Enter something:")
+    document.writeln("You entered: "+input)
+}

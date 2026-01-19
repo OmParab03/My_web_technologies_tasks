@@ -17,6 +17,7 @@
             background-color: rgb(144, 181, 188);
             margin-left: 4%;
             border-radius: 20px;
+            margin-top:5% ;
             
         }
         #butndiv2{
@@ -28,6 +29,17 @@
             margin-left: 4%;
             border-radius: 20px;
 
+        }
+        #butndiv3{
+           text-align: center;
+            width: 90%;
+            padding: 20px;
+            background-color: rgb(144, 181, 188); 
+            margin-top: 5%;
+            margin-left: 4%;
+            border-radius: 20px;
+
+        
         }
         #marks{
             width: 200px;
@@ -55,20 +67,38 @@
     </style>
 </head>
 <body>
+    <h1 id="test2">Activity 1</h1>
     <div id="butndiv1"> 
-    <input type="text" placeholder="Enter the marks" id="mark"  >
+    <input type="number" placeholder="Enter the marks" id="mark"  >
     <button onclick=marks() style="width: 50px;height: 20px;">click</button>
     </div>
-    <div id="butndiv2">
-    <input type="text" placeholder="Enter the number for even odd check" id="number">
+    <div id="butndiv1">
+    <input type="number" placeholder="Enter the number for even odd check" id="number">
     <button onclick=checkEvenOdd() style="width: 50px;height: 20px;">click</button>
     </div>
+    <div id="butndiv1">
+       <input type="text" placeholder="Enter name" id="name">
+       <input type="text" placeholder="Enter age" id="age">
+       <input type="text" placeholder="Enter city" id="city">
+       <button onclick=displaydetails() style="width: 50px;height: 20px;">click </button>
+    </div>
+
+
+    <div id="butndiv1">
+    <input type="number" placeholder="Enter number for loop" id="num">
+    <button onclick=printnumbers() style="width: 50px;height: 20px;">click</button>
+    </div>
+    
+    <div>
+        <h1>Testing prompt..</h1>
+        <button onclick=testprompt() style="width: 50px;height: 20px;">click </button>
+
     </div>
     <div id="outputdiv">
         <h1>Answer : </h1>
     </div>
     <script src="test.js">
-
+    
     </script>
 </body>
 </html>
