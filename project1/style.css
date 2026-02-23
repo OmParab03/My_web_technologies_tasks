@@ -1,0 +1,72 @@
+body {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.main_div{
+  background:linear-gradient(135deg,rgb(227, 142, 142) , rgb(224, 39, 39));
+    height: 80%;
+    width: 80%;
+    margin: px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+
+}
+
+.form_div {
+    width: 47%;
+    text-align: center; 
+    background: linear-gradient(135deg, #ffffff, #f0f4ff);
+    height: 500px;
+    border-radius: 20px;
+
+}
+
+.head {
+    color: rgb(60, 45, 45);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    
+}
+#name{
+    margin: 20px;
+    width: 70%;
+    
+    height: 30px;
+}
+#email{
+    margin: 20px;
+    width: 70%;
+    
+    height: 30px;
+}
+#phone{
+    margin: 20px;
+    width: 70%;
+    
+    height: 30px;
+}
+.form_div input::placeholder{
+    text-align: center;
+    font: italic bold 14px arial;
+}
+#submit-button{
+    width: 40%;
+    margin: 30px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(73, 180, 229);
+    font-size: 15px;
+}
+#submit-button:hover {
+    background-color:  rgb(41, 169, 229);
+    cursor: pointer;
+}
+
+
+
