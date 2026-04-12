@@ -1,0 +1,36 @@
+----express----
+----express is a minimal and flexible framework for web applications,
+----that simplify the developemant of web applications framework.
+----works for large applications than nodeJS.
+
+
+features
+---routing
+---middleware support
+---request and response handling  
+---rest API creation
+---template rendering
+
+\\\\\ steps\\\\\
+command -- npm init
+command -- npm install express
+command -- n
+
+NPM---- node packaage manager
+
+
+---activity 
+1. different between package.json  & package-lock.json
+2. different between dev dependancies & dependancies.
+3. get information...
+
+
+%%%%%%%%%%%% routing %%%%%%%%%%%%%%%
+---how a response to a user
+---for a specific URL and http 
+===== components =====
+-URL path -handler funnction - http method 
+
+%%%%%%%%% middleware %%%%%%%%%%
+---functions  that execute during the lifecycle of request beefore sesnding the final response 
+---they have access to request , response ,next .

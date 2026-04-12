@@ -1,0 +1,39 @@
+Angular is a single page application ( SPA )
+--developed by google.
+--@angular/cli = commandline 
+
+run command ng serve-o , ng s , ng s-o
+ng= angular
+sngulsrd common port number =4200
+package.json = is config file info about your prrojeect ,list packages
+packagelog.json = same as package.json but in more detail
+angular.json  =is project config file ( styles ,scripts,)
+styles.css =global css file 
+.gitignore =version control file
+.editorconfig = visual studeo code changing file 
+index.html=load html
+main.ts = entry point  , main file
+app.config.ts =app configuration file
+
+
+dt types =
+  premitive , non-premetive
+
+components = is a UI blocks structure when we create components
+components create 4 files = html,css,typescripts,specs.ts
+command for create components = ng generate component component_name
+specs.ts = testing file
+
+--create component -> in app.html add <admin></admin> -> app.ts lint or add that component in [router , Admin] -> run
+
+data bindings 
+1 . onw way 
+ - interpolation -{{value}}
+ - property - [property] ="value"
+ - event    - {event} ="handeler()"
+
+2 . two way
+-[(ngModel)]="value"
+
+data bindings: 
+--connect UI to code (HTML)
