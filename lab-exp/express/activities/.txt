@@ -1,0 +1,92 @@
+package.json	
+Contains project details	
+Manually created/updated	
+Stores dependencies info	
+Can use version range	
+Used for project setup	
+
+
+package-lock.json
+Contains exact installed versions
+Automatically generated
+Stores dependency tree
+Stores fixed version
+Used for exact installation
+
+
+////////
+dependencies	        devDependencies
+Needed in production	Needed only during development
+Runs project	        Helps build project
+Example: express	    Example: nodemon
+
+
+///////
+Method	     Use
+GET	Read     data
+POST	     Insert data
+PUT          Update  full data
+DELETE	     Delete data
+
+
+////middle ware 
+check login
+validate data
+log requests
+handle errors
+
+//types
+ application level 
+ router level 
+ built in middleware
+ error handling middleware
+
+
+ ///Used in:
+
+JWT Authentication
+Role checking
+API logging
+Error handling
+Request validation
+Payment gateway security
+
+1. What are Query Parameters?
+Query parameters send extra data in URL.
+
+
+
+Example 1
+/product?id=10
+Example 2
+/search?name=laptop
+Example 3
+/students?course=BCA
+Example 4
+/users?page=2
+
+
+4. Real-Time Use of Query Parameters
+
+Used in:
+search filters
+pagination
+sorting
+product filtering
+reports
+admin panels
+
+
+2. What are Static Files?
+
+Static files are:
+CSS
+JS
+Images
+Fonts
+They do not change dynamically.
+
+
+3. What is Express Router?
+Router helps separate routes into files.
+Makes project clean.

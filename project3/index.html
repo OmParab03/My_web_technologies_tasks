@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finance Tracker - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-page">
+
+<h1 class="app-title">💸 Finance Tracker</h1>
+
+
+<div class="auth-container">
+  <h2 id="title">🔐 Login</h2>
+  <p style="opacity: 0.8; font-size: 14px;">Track your expenses and get AI-powered financial advice</p>
+
+  <input id="username" placeholder="📧 Username" autocomplete="username">
+  <input id="password" type="password" placeholder="🔒 Password" autocomplete="current-password">
+
+  <button onclick="handleAuth()">Login</button>
+
+  <p id="toggleText" onclick="toggleForm()" title="Click to switch between login and register">
+    Don't have an account? Create one
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

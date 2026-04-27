@@ -1,0 +1,5 @@
+express → server
+cors → allow Angular frontend to connect
+dotenv → store API key safely
+axios → call Groq API
+nodemon → auto restart server

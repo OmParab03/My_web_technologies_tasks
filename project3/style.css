@@ -1,0 +1,469 @@
+/* 🌈 Background */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #9333ea);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Different body styling for different pages */
+body.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+body.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.app-title {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  .app-title {
+    left: 20px;
+    font-size: 22px;
+    top: 20px;
+  }
+}
+
+/* 🌊 Background animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🧊 Glass Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(45deg, rgba(56,189,248,0.5), rgba(147,51,234,0.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* 🧭 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  backdrop-filter: blur(20px);
+  background: rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar #userName {
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Media query for responsive navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .navbar #userName {
+    display: none;
+  }
+}
+
+/* 👤 Profile icon */
+.profile-icon {
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.profile-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 👤 Profile Card Enhancement */
+.profile-card {
+  width: 400px;
+  text-align: left;
+  animation: fadeIn 0.6s ease;
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* Display section */
+#profileDisplay {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Text styling */
+#profileDisplay p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 15px 0;
+}
+
+/* Input full width */
+.profile-card input {
+  width: calc(100% - 16px);
+  padding: 12px 8px;
+}
+
+/* 📊 Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 30px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+/* 🧾 Inputs */
+/* Default input */
+input {
+  padding: 12px;
+  margin: 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(56,189,248,0.6);
+  background: rgba(255,255,255,0.15);
+}
+
+/* Login page inputs */
+.auth-container input {
+  width: calc(100% - 16px);
+  margin: 10px 0;
+  display: block;
+}
+
+/* Dashboard inputs */
+.grid .card input {
+  width: calc(50% - 16px);
+  display: inline-block;
+}
+
+.grid .card textarea {
+  width: calc(100% - 16px);
+  padding: 12px;
+  margin: 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.grid .card textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.grid .card textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(56,189,248,0.6);
+  background: rgba(255,255,255,0.15);
+}
+
+@media (max-width: 768px) {
+  .grid .card input {
+    width: calc(100% - 16px);
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+}
+
+/* ✨ Button */
+button {
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #38bdf8, #6366f1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(56,189,248,0.6);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.delete-btn {
+  padding: 8px 12px;
+  margin: 0;
+  font-size: 16px;
+  background: rgba(255,59,48,0.3);
+}
+
+.delete-btn:hover {
+  background: rgba(255,59,48,0.6);
+  transform: scale(1.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* 📋 List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  animation: fadeIn 0.5s ease;
+  transition: 0.3s;
+}
+
+li:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.expense-info {
+  flex: 1;
+}
+
+.expense-info strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.expense-info small {
+  display: block;
+  margin-top: 4px;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.expense-info p {
+  margin: 4px 0;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ✨ Fade animation */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.98);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 📊 Chart container */
+canvas {
+  margin-top: 15px;
+  max-width: 100%;
+}
+
+/* 🔐 Auth card */
+.auth-container {
+  width: 350px;
+  text-align: center;
+  margin-top: 0;
+  animation: fadeIn 0.6s ease;
+}
+
+.auth-container input {
+  width: calc(100% - 16px);
+}
+
+.auth-container p {
+  margin: 15px 0;
+  cursor: pointer;
+  color: #38bdf8;
+  transition: 0.3s;
+}
+
+.auth-container p:hover {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+/* AI Advice Box */
+#aiAdvice {
+  background: rgba(76, 175, 80, 0.1);
+  border-left: 4px solid #4CAF50;
+}
+
+#aiAdvice h3 {
+  color: #81C784;
+  margin-top: 0;
+}
+
+.advice-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.advice-item:last-child {
+  border-bottom: none;
+}
+
+.advice-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.advice-score {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.advice-score strong {
+  display: block;
+  font-size: 18px;
+  color: #81C784;
+}

@@ -1,0 +1,5 @@
+how we can use ifelse , for ,while loops in angular
+find--track $index
+structural Directives
+eg: with div colour change.
+

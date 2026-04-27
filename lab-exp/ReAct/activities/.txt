@@ -1,0 +1,149 @@
+
+
+// There are mainly 2 types of components:
+// 1. Functional Component
+// 2. Class Component
+
+
+// Functional Component Example
+
+function Welcome() {
+    return <h1>Welcome Functional Component</h1>;
+}
+
+export default Welcome;
+
+
+// Class Component Example
+
+import React, { Component } from "react";
+
+class WelcomeClass extends Component {
+    render() {
+        return <h1>Welcome Class Component</h1>;
+    }
+}
+
+export default WelcomeClass;
+
+
+
+
+
+
+
+// App.jsx
+
+import Student from "./Student";
+
+function App() {
+    return (
+        <>
+            <Student name="Omkar" age="20" />
+            <Student name="Rahul" age="21" />
+        </>
+    );
+}
+
+export default App;
+
+
+// Student.jsx
+
+function Student(props) {
+    return (
+        <h2>
+            Name: {props.name} | Age: {props.age}
+        </h2>
+    );
+}
+
+export default Student;
+
+
+
+
+
+
+
+// Example 1: Counter using useState
+
+import React, { useState } from "react";
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <>
+            <h2>Count: {count}</h2>
+            <button onClick={() => setCount(count + 1)}>
+                Increase
+            </button>
+        </>
+    );
+}
+
+export default Counter;
+
+
+// Example 2: Show/Hide Text
+
+import React, { useState } from "react";
+
+function ToggleText() {
+    const [show, setShow] = useState(true);
+
+    return (
+        <>
+            <button onClick={() => setShow(!show)}>
+                Toggle Text
+            </button>
+
+            {show && <h2>Hello React State!</h2>}
+        </>
+    );
+}
+
+export default ToggleText;
+
+
+
+
+
+
+
+// Hooks are special functions in React
+// that allow functional components
+// to use state and lifecycle features.
+
+// Common Hooks:
+// 1. useState()
+// 2. useEffect()
+// 3. useContext()
+// 4. useRef()
+// 5. useMemo()
+// 6. useCallback()
+
+
+// Example of useEffect Hook
+
+import React, { useState, useEffect } from "react";
+
+function ExampleHook() {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        console.log("Component Rendered");
+    }, []);
+
+    return (
+        <>
+            <h2>{count}</h2>
+            <button onClick={() => setCount(count + 1)}>
+                Click
+            </button>
+        </>
+    );
+}
+
+export default ExampleHook;
