@@ -1,0 +1,67 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+}
+
+.dashboard {
+  padding: 30px;
+  text-align: center;
+}
+
+.main-title {
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+/* Profile Section */
+.profile-box {
+  width: 600px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.profile-box h2 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.profile-box p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Cards Section */
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #16a34a;
+}

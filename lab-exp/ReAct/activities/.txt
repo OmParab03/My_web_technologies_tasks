@@ -1,6 +1,6 @@
 
 
-// There are mainly 2 types of components:
+
 // 1. Functional Component
 // 2. Class Component
 

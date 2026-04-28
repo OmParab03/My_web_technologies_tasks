@@ -10,11 +10,12 @@ body {
 }
 
 .data {
-    height: 500px;
+    height: 200px;
     width: 500px;
     background-color: aquamarine;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    margin-top:20px
 }
