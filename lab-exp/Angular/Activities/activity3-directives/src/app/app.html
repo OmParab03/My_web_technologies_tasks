@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Angular Directives</h2>
+
+  <button (click)="showText = !showText">Toggle Text</button>
+  <p *ngIf="showText">This text is shown using *ngIf</p>
+
+  <h3>Color List</h3>
+  <ul>
+    <li *ngFor="let color of colors">{{ color }}</li>
+  </ul>
+
+  <div [ngClass]="isActive ? 'active-box' : 'inactive-box'">
+    ngClass Example
+  </div>
+
+  <button (click)="isActive = !isActive">Change Class</button>
+</div>

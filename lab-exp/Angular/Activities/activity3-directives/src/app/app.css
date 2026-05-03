@@ -1,0 +1,21 @@
+.container {
+  width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+.active-box {
+  background-color: green;
+  color: white;
+  padding: 150px;
+  margin-top: 10px;
+}
+.inactive-box {
+  background-color: red;
+  color: white;
+  padding: 150px;
+  margin-top: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
